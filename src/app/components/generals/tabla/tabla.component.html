@@ -1,0 +1,31 @@
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Icono</th>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Sexo</th>
+      <th>Edad</th>
+      <th>Correo</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of personas">
+      <tr>
+        <td><i class="fa " [ngClass]="{ ' fa-heart': item.Picono==1,' fa-angellist': item.Picono==2,' fa-bus': item.Picono==3,' fa-paint-brush': item.Picono==4,
+          ' fa-toggle-off': item.Picono==5,' fa-bicycle': item.Picono==6,' fa-line-chart': item.Picono==7,' fa-wifi': item.Picono==8,
+          ' fa-pie-chart': item.Picono==9,' fa-trash': item.Picono==10}"></i></td>
+        <td>{{item.Pnombre}}</td>
+        <td>{{item.Pappa}}</td>
+        <td>{{item.Papma}}</td>
+        <td>{{item.Psexo}}</td>
+        <td>{{item.Pedad}}</td>
+        <td>{{item.Pcorreo}}</td>
+      </tr>
+      <tr>
+        <td ></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+</table>

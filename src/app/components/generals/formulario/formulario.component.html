@@ -1,0 +1,54 @@
+<form [formGroup]="forma" (ngSubmit)="addPersona()" novalidate>
+  <div class="form-group" >
+    <label for="exampleInputName" class="col-md-3 col-lg-2 col-sm-6" >Nombre</label>
+    <input type="text" name="pNombre" id="pNombre"
+    class="col-lg-3 col-md-6 col-sm-6" placeholder="Ejemplo: Israel"
+
+    formControlName="nombre"
+    /><br>
+    <label for="exampleInputApPa" class="col-md-3 col-lg-2 col-sm-6">Apellido Paterno</label>
+    <input type="text" name="exampleApPa"
+    formControlName="appa"
+    id="exampleApPa" class="col-lg-3 col-md-6 col-sm-6" placeholder="Ejemplo: Hernandez"><br>
+    <label for="exampleInputApMa" class="col-md-3 col-lg-2 col-sm-6">Apellido Materno</label>
+    <input type="text" name="exampleApMa"
+     id="exampleApMa"
+     formControlName="apma" class="col-lg-3 col-md-6 col-sm-6" placeholder="Ejemplo: Garcia"><br>
+    <div class="col-lg-2 col-md-2 col-sm-12" style="float:left">
+      Sexo
+      <div class="row">
+
+        <input type="radio" formControlName="sexo" name="sexo" id="F"   value="F"><label for="F"> Femenino</label>
+      </div>
+      <div class="row">
+
+        <input type="radio" name="sexo" formControlName="sexo" id="M"    value="M"><label for="M"> Masculino</label>
+      </div>
+    </div>
+    <div>
+      <label for="exampleInputEdad" class="col-md-2 col-lg-1 col-sm-6">Edad</label>
+      <input type="text"  name="exampleEdad" id="exampleEdad" formControlName="edad"   class="col-lg-2 col-md-5 col-sm-6" placeholder="Ejemplo: 20"><br>
+
+    </div>
+    <br><br><br>
+
+    <label for="exampleInputEmail1" class="col-md-3 col-lg-2 col-sm-6">Email address</label>
+    <input type="text" class="col-lg-3 col-md-6 col-sm-6"
+    formControlName="correo"   id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email@example.com">
+    <br>
+    <div class="row">
+
+      <div class="col-md-12 ">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+
+            <button class="btn btn-dark" type="submit" [disabled]="forma.invalid">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>
+
+
